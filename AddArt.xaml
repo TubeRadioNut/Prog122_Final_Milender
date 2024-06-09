@@ -1,0 +1,202 @@
+﻿<Window
+    x:Class="Prog122_Final_Milender.AddArt"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:Prog122_Final_Milender"
+    mc:Ignorable="d"
+    Title="Add Art"
+    Height="565"
+    Width="1000">
+    <Canvas
+        x:Name="cnvAddArt"
+        Background="#FF515983">
+        <Canvas
+            x:Name="cnvContols"
+            Height="504"
+            Width="500"
+            Background="#FF8298B1"
+            Canvas.Left="479"
+            Canvas.Top="10"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+            <Label
+                Content="Art Name:"
+                Canvas.Left="30"
+                Canvas.Top="21"
+                FontSize="18"
+                FontFamily="Arial Black" />
+            <Label
+                Content="Date:"
+                Canvas.Left="78"
+                Canvas.Top="68"
+                FontSize="18"
+                FontFamily="Arial Black"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" />
+            <Label
+                Content="Artist:"
+                Canvas.Left="68"
+                Canvas.Top="127"
+                FontSize="18"
+                FontFamily="Arial Black"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center" />
+            <Label
+                Content="Art Information:"
+                Canvas.Left="30"
+                Canvas.Top="181"
+                FontSize="18"
+                FontFamily="Arial Black"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" />
+            <RichTextBox
+                Height="104"
+                Width="437"
+                Canvas.Left="30"
+                Canvas.Top="217"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center">
+                <FlowDocument>
+                    <Paragraph>
+                        <Run
+                            x:Name="runInformation"
+                            Text="" />
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+            <Button
+                x:Name="btnImagePath"
+                Content="Image File Path"
+                Canvas.Left="30"
+                Canvas.Top="338"
+                FontSize="18"
+                FontFamily="Arial Black"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Width="165" />
+            <TextBox
+                x:Name="txtArtNamr"
+                Canvas.Left="190"
+                TextWrapping="Wrap"
+                Canvas.Top="21"
+                Width="267"
+                FontSize="18"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center" />
+            <TextBox
+                x:Name="txtFilePath"
+                Canvas.Left="200"
+                TextWrapping="Wrap"
+                Canvas.Top="338"
+                Width="267"
+                FontSize="18"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" />
+            <Label
+                Content="Style:"
+                Canvas.Left="45"
+                Canvas.Top="390"
+                FontSize="16"
+                FontFamily="Arial Black" />
+            <RadioButton
+                x:Name="rbRealism"
+                Content="Realism"
+                Canvas.Left="128"
+                Canvas.Top="398"
+                FontSize="16"
+                FontFamily="Arial Black" />
+            <RadioButton
+                x:Name="rbSurrealism"
+                Content="Surrealism"
+                Canvas.Left="248"
+                Canvas.Top="398"
+                FontSize="16"
+                FontFamily="Arial Black"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center" />
+            <RadioButton
+                x:Name="rbFresco"
+                Content="Fresco"
+                Canvas.Left="378"
+                Canvas.Top="398"
+                FontSize="16"
+                FontFamily="Arial Black"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center" />
+            <RadioButton
+                x:Name="rbGothic"
+                Content="Gothic"
+                Canvas.Left="128"
+                Canvas.Top="433"
+                FontSize="16"
+                FontFamily="Arial Black"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top" />
+            <RadioButton
+                x:Name="rbFauvism"
+                Content="Fauvism"
+                Canvas.Left="250"
+                Canvas.Top="433"
+                FontSize="16"
+                FontFamily="Arial Black"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" />
+            <RadioButton
+                x:Name="rbCubism"
+                Content="Cubism"
+                Canvas.Left="378"
+                Canvas.Top="433"
+                FontSize="16"
+                FontFamily="Arial Black"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" />
+            <Button
+                x:Name="btnAddArt"
+                Content="Add Art"
+                Canvas.Left="88"
+                Canvas.Top="469"
+                FontFamily="Arial Black"
+                FontSize="18"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="324" />
+            <ComboBox
+                x:Name="cmbDate"
+                Canvas.Left="190"
+                Canvas.Top="74"
+                Width="134"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center" />
+            <TextBox
+                x:Name="txtArtist"
+                Canvas.Left="190"
+                TextWrapping="Wrap"
+                Canvas.Top="127"
+                Width="267"
+                FontSize="18"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top" />
+        </Canvas>
+        <Image
+            Height="332"
+            Canvas.Left="30"
+            Canvas.Top="34"
+            Width="412"
+            Source="/GradeBook_2.jpg"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top" />
+        <Button
+            x:Name="btnOpenMainWindow"
+            Content="Back to Display Art"
+            Canvas.Left="88"
+            Canvas.Top="483"
+            FontSize="18"
+            FontFamily="Arial Black"
+            Height="31"
+            Width="296"
+            Click="btnOpenMainWindow_Click" />
+
+    </Canvas>
+</Window>

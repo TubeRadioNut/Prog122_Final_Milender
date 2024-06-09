@@ -1,0 +1,62 @@
+﻿<Window
+    x:Class="Prog122_Final_Milender.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:Prog122_Final_Milender"
+    mc:Ignorable="d"
+    Title="Display Art"
+    Height="565"
+    Width="1000">
+    <Canvas
+        x:Name="cnvMainWindow"
+        Background="#FF515983">
+        <Image
+            x:Name="imgArt"
+            Height="291"
+            Canvas.Left="23"
+            Canvas.Top="27"
+            Width="390"
+            Source="/Grade.jpg"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" />
+        <ListView
+            x:Name="lvArt"
+            Height="375"
+            Width="535"
+            d:ItemsSource="{d:SampleData ItemCount=5}"
+            Canvas.Left="433"
+            Canvas.Top="27"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <RichTextBox
+            x:Name="rtbArt"
+            Height="197"
+            Width="382"
+            Canvas.Left="27"
+            Canvas.Top="331"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top">
+
+        </RichTextBox>
+        <Button
+            x:Name="btnAddArt"
+            Content="Add Artwork"
+            Canvas.Left="576"
+            Canvas.Top="463"
+            FontFamily="Arial Black"
+            FontSize="20"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Width="250"
+            Click="btnAddArt_Click" />
+
+    </Canvas>
+</Window>

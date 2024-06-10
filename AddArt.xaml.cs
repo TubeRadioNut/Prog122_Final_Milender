@@ -43,5 +43,10 @@ namespace Prog122_Final_Milender
                 MessageBox.Show("Display Art Window is already open");
             }
         }
+
+        private void btnAddArt_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }//End class 
 }//End namespace

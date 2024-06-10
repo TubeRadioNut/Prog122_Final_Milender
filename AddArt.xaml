@@ -161,7 +161,8 @@
                 FontSize="18"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Width="324" />
+                Width="324"
+                Click="btnAddArt_Click" />
             <ComboBox
                 x:Name="cmbDate"
                 Canvas.Left="190"

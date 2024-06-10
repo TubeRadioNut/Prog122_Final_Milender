@@ -113,6 +113,7 @@ namespace Prog122_Final_Milender
             Run run = new Run(_styles.ToString());
             run.FontSize = 16;
             run.TextDecorations = TextDecorations.Underline;
+            para.Inlines.Add(run);
             return para;
         }
 

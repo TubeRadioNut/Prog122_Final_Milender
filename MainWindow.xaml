@@ -14,9 +14,9 @@
         Background="#FF515983">
         <Image
             x:Name="imgArt"
-            Height="291"
-            Canvas.Left="23"
-            Canvas.Top="27"
+            Height="282"
+            Canvas.Left="11"
+            Canvas.Top="10"
             Width="390"
             HorizontalAlignment="Left"
             VerticalAlignment="Top" />
@@ -53,10 +53,10 @@
             x:Name="rtbArt"
             Height="197"
             Width="382"
-            Canvas.Left="27"
-            Canvas.Top="331"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Top">
+            Canvas.Left="23"
+            Canvas.Top="309"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
 
         </RichTextBox>
         <Button

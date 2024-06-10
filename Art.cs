@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Documents;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 namespace Prog122_Final_Milender
@@ -15,16 +16,18 @@ namespace Prog122_Final_Milender
         public enum Styles { Realism, Surrealism, Fresco, Gothic, Fauvism, Cubism}
         string _name;
         int _date;
+        string _artist;
         string _information;
         string _filePath;
         Styles _styles;
         BitmapImage _image;
 
         //Constructor
-        public Art(string name, int date, string informaion, string filePath, Styles styles)
+        public Art(string name, int date,string artist, string informaion, string filePath, Styles styles)
         {
             _name = name;
             _date = date;
+            _artist = artist;
             _information = informaion;
             _filePath = filePath;
             _styles = styles;
@@ -34,6 +37,7 @@ namespace Prog122_Final_Milender
         //Properties
         public string Name { get => _name; set => _name = value; }
         public int Date { get => _date; set => _date = value; }
+        public string Artist { get => _artist; set => _artist = value; }
         public string Information { get => _information; set => _information = value; }
         public string FilePath { get => _filePath; set => _filePath = value; }
         public Styles Styles1 { get => _styles; set => _styles = value; }
@@ -55,7 +59,10 @@ namespace Prog122_Final_Milender
             FlowDocument fullDoc = new FlowDocument();
             fullDoc.Blocks.Add(Date_Formatted());
             fullDoc.Blocks.Add(Nmae_Formatted());
-            fullDoc.Blocks.Add(Information_Formatted());
+            fullDoc.Blocks.Add(Artist_Formatted())
+;           fullDoc.Blocks.Add(Information_Formatted());
+            fullDoc.Blocks.Add(Styles_Formatted());
+            fullDoc.FontFamily = new FontFamily("Arial");
             return fullDoc;
         }
         //Create a method that returns a formatted Paragraph for date
@@ -68,7 +75,7 @@ namespace Prog122_Final_Milender
             para.Inlines.Add(run);
             return para;
         }
-        //Create a mehtod that returns a formatted Paragraph for name
+        //Create a method that returns a formatted Paragraph for name
         private Paragraph Nmae_Formatted()
         {
             Paragraph para = new Paragraph();
@@ -78,7 +85,18 @@ namespace Prog122_Final_Milender
             para.Inlines.Add(run);
             return para;
         }
-        //Create a mehtod that returns a formatted Paragraph for information
+        //Create a method that returns a formatted Peragraph for artist
+        private Paragraph Artist_Formatted()
+        {
+            Paragraph para = new Paragraph();
+            Run run = new Run(_artist);
+            run.FontSize = 18;
+            run.FontStyle = FontStyles.Oblique;
+            run.FontWeight = FontWeights.Bold;
+            para.Inlines.Add(run);
+            return para;
+        }
+        //Create a method that returns a formatted Paragraph for information
         private Paragraph Information_Formatted()
         {
             Paragraph para = new Paragraph();
@@ -94,7 +112,7 @@ namespace Prog122_Final_Milender
             Paragraph para = new Paragraph();
             Run run = new Run(_styles.ToString());
             run.FontSize = 16;
-            run.FontStyle = FontStyles.Italic;
+            run.TextDecorations = TextDecorations.Underline;
             return para;
         }
 

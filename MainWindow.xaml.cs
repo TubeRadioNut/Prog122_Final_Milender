@@ -23,6 +23,7 @@ namespace Prog122_Final_Milender
         public MainWindow()
         {
             InitializeComponent();//<---Don't delete this and keep at the top of MainWindow()
+            lvArt.ItemsSource = Data.Artworks;
 
         }//End MainWindow
 
@@ -40,6 +41,16 @@ namespace Prog122_Final_Milender
             else
             {
                 MessageBox.Show("Add Art Window is already open");
+            }
+        }
+
+        private void lvArt_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Art selectedArt = lvArt.SelectedItem as Art;
+            if(selectedArt != null)
+            {
+                rtbArt.Document = selectedArt.FormattedArtworkPost();
+                imgArt.Source = selectedArt.Image;
             }
         }
     }//End Class

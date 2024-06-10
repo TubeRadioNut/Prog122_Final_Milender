@@ -182,14 +182,13 @@
         <Image
             Height="332"
             Canvas.Left="30"
-            Canvas.Top="34"
+            Canvas.Top="24"
             Width="412"
-            Source="/GradeBook_2.jpg"
-            HorizontalAlignment="Center"
+            HorizontalAlignment="Left"
             VerticalAlignment="Top" />
         <Button
             x:Name="btnOpenMainWindow"
-            Content="Back to Display Art"
+            Content="Open Display Art"
             Canvas.Left="88"
             Canvas.Top="483"
             FontSize="18"

@@ -57,7 +57,8 @@
                 Canvas.Left="30"
                 Canvas.Top="217"
                 HorizontalAlignment="Left"
-                VerticalAlignment="Center">
+                FontSize="16"
+                FontFamily="Arial Black">
                 <FlowDocument>
                     <Paragraph>
                         <Run
@@ -75,16 +76,18 @@
                 FontFamily="Arial Black"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center"
-                Width="165" />
+                Width="165"
+                Click="btnImagePath_Click" />
             <TextBox
-                x:Name="txtArtNamr"
+                x:Name="txtArtName"
                 Canvas.Left="190"
                 TextWrapping="Wrap"
                 Canvas.Top="21"
                 Width="267"
                 FontSize="18"
                 HorizontalAlignment="Left"
-                VerticalAlignment="Center" />
+                VerticalAlignment="Center"
+                FontFamily="Arial Black" />
             <TextBox
                 x:Name="txtFilePath"
                 Canvas.Left="200"
@@ -93,7 +96,8 @@
                 Width="267"
                 FontSize="18"
                 HorizontalAlignment="Left"
-                VerticalAlignment="Top" />
+                VerticalAlignment="Top"
+                FontFamily="Arial Black" />
             <Label
                 Content="Style:"
                 Canvas.Left="45"
@@ -151,7 +155,8 @@
                 FontSize="16"
                 FontFamily="Arial Black"
                 HorizontalAlignment="Left"
-                VerticalAlignment="Top" />
+                VerticalAlignment="Top"
+                IsChecked="True" />
             <Button
                 x:Name="btnAddArt"
                 Content="Add Art"
@@ -169,7 +174,8 @@
                 Canvas.Top="74"
                 Width="134"
                 HorizontalAlignment="Center"
-                VerticalAlignment="Center" />
+                VerticalAlignment="Center"
+                FontFamily="Arial Black" />
             <TextBox
                 x:Name="txtArtist"
                 Canvas.Left="190"
@@ -178,9 +184,11 @@
                 Width="267"
                 FontSize="18"
                 HorizontalAlignment="Center"
-                VerticalAlignment="Top" />
+                VerticalAlignment="Top"
+                FontFamily="Arial Black" />
         </Canvas>
         <Image
+            x:Name="imgArtWork"
             Height="332"
             Canvas.Left="30"
             Canvas.Top="24"

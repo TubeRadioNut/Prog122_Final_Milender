@@ -45,7 +45,7 @@ namespace Prog122_Final_Milender
 
 
         //Methods
-        //Create method that returns a BitmapImage and takes a string in its parameters > to convert filePath string to BitmapImage
+        //Create method that returns a BitmapImage and takes a string in its parameters -> to convert filePath string to BitmapImage
         public static BitmapImage GenerateBitMap(string filePath)
         {
             Uri convertFilePath = new Uri(filePath);
@@ -53,7 +53,7 @@ namespace Prog122_Final_Milender
             return bitmap;
         }
 
-        //Create a method that returns a formatted FlowDocument
+        //Create a method that returns a formatted FlowDocument for a Rich Text Box
         public FlowDocument FormattedArtworkPost()
         {
             FlowDocument fullDoc = new FlowDocument();
@@ -70,7 +70,7 @@ namespace Prog122_Final_Milender
         {
             Paragraph para = new Paragraph();
             Run run = new Run(_date.ToString());
-            run.FontSize = 8;
+            run.FontSize = 10;
             run.FontWeight = FontWeights.Bold;
             para.Inlines.Add(run);
             return para;
@@ -101,7 +101,7 @@ namespace Prog122_Final_Milender
         {
             Paragraph para = new Paragraph();
             Run run = new Run(_information);
-            run.FontSize = 16;
+            run.FontSize = 12;
             run.FontStyle = FontStyles.Italic;
             para.Inlines.Add(run);
             return para;

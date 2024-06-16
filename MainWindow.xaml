@@ -46,6 +46,9 @@
                     <GridViewColumn
                         Header="Art Style"
                         DisplayMemberBinding="{Binding Styles1}" />
+                    <GridViewColumn
+                        Header="Information"
+                        DisplayMemberBinding="{Binding Information}" />
                 </GridView>
             </ListView.View>
         </ListView>
@@ -70,6 +73,43 @@
             VerticalAlignment="Top"
             Width="250"
             Click="btnAddArt_Click" />
+        <Button
+            x:Name="btnOpenSideShow"
+            Content="Slide Show"
+            Canvas.Left="576"
+            Canvas.Top="420"
+            FontSize="20"
+            FontFamily="Arial Black"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Width="250"
+            Click="btnOpenSideShow_Click" />
+        <Canvas
+            x:Name="cnvSlideShow"
+            Height="549"
+            Width="1000"
+            Background="Black"
+            Visibility="Hidden">
+            <Image
+                x:Name="imgSlideShow"
+                Height="386"
+                Canvas.Left="177"
+                Canvas.Top="36"
+                Width="646"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" />
+            <Button
+                x:Name="btnCloseSlideShow"
+                Content="Close Slide Show"
+                Canvas.Left="361"
+                Canvas.Top="467"
+                FontSize="20"
+                FontFamily="Arial Black"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Width="278"
+                Click="btnCloseSlideShow_Click" />
+        </Canvas>
 
     </Canvas>
 </Window>

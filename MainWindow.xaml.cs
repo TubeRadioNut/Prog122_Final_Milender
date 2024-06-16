@@ -20,6 +20,7 @@ namespace Prog122_Final_Milender
     /// </summary>
     public partial class MainWindow : Window
     {
+        public bool stopForLoop = false;
         public MainWindow()
         {
             InitializeComponent();//<---Don't delete this and keep at the top of MainWindow()
@@ -52,6 +53,23 @@ namespace Prog122_Final_Milender
                 rtbArt.Document = selectedArt.FormattedArtworkPost();
                 imgArt.Source = selectedArt.Image;
             }
+        }
+
+        private async void btnOpenSideShow_Click(object sender, RoutedEventArgs e)
+        {
+            cnvSlideShow.Visibility = Visibility.Visible;
+            for(int i = 0; Data.Artworks.Count > i && !stopForLoop; i++)
+            {
+                imgSlideShow.Source = Data.Artworks[i].Image;
+                await Task.Delay(5000);
+            }
+            cnvSlideShow.Visibility = Visibility.Hidden;
+        }
+
+        private void btnCloseSlideShow_Click(object sender, RoutedEventArgs e)
+        {
+            stopForLoop = true;
+            cnvSlideShow.Visibility= Visibility.Hidden;
         }
     }//End Class
 }//End namespace

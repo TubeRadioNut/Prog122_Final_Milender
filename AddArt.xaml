@@ -28,7 +28,7 @@
                 FontSize="18"
                 FontFamily="Arial Black" />
             <Label
-                Content="Date:"
+                Content="Year:"
                 Canvas.Left="78"
                 Canvas.Top="68"
                 FontSize="18"

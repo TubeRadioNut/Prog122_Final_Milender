@@ -65,25 +65,36 @@
         <Button
             x:Name="btnAddArt"
             Content="Add Artwork"
-            Canvas.Left="576"
-            Canvas.Top="463"
+            Canvas.Left="433"
+            Canvas.Top="422"
             FontFamily="Arial Black"
             FontSize="20"
             HorizontalAlignment="Left"
-            VerticalAlignment="Top"
+            VerticalAlignment="Center"
             Width="250"
             Click="btnAddArt_Click" />
         <Button
             x:Name="btnOpenSideShow"
             Content="Slide Show"
             Canvas.Left="576"
-            Canvas.Top="420"
+            Canvas.Top="486"
             FontSize="20"
             FontFamily="Arial Black"
-            HorizontalAlignment="Left"
+            HorizontalAlignment="Center"
             VerticalAlignment="Center"
             Width="250"
             Click="btnOpenSideShow_Click" />
+        <Button
+            x:Name="btnOpenEditArt"
+            Content="Edit Art"
+            Canvas.Left="718"
+            Canvas.Top="422"
+            FontSize="20"
+            FontFamily="Arial Black"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Width="250"
+            Click="btnOpenEditArt_Click" />
         <Canvas
             x:Name="cnvSlideShow"
             Height="549"
@@ -110,6 +121,7 @@
                 Width="278"
                 Click="btnCloseSlideShow_Click" />
         </Canvas>
+        
 
     </Canvas>
 </Window>

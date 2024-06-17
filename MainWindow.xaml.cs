@@ -1,7 +1,7 @@
 ﻿//Charles Milender
 //6-8-2024
 //Programming 122
-//Final
+//Final - Art Blog - S24
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -70,6 +70,19 @@ namespace Prog122_Final_Milender
         {
             stopForLoop = true;
             cnvSlideShow.Visibility= Visibility.Hidden;
+        }
+
+        private void btnOpenEditArt_Click(object sender, RoutedEventArgs e)
+        {
+            bool editArtWindowIsOpen = Application.Current.Windows.OfType<EditArt>().FirstOrDefault() == null;
+            if(editArtWindowIsOpen)
+            {
+                new EditArt().Show();
+            }
+            else
+            {
+                MessageBox.Show("Edit Art Window is already open");
+            }
         }
     }//End Class
 }//End namespace

@@ -13,7 +13,7 @@
         x:Name="cnvAddArt"
         Background="#FF515983">
         <Canvas
-            x:Name="cnvContols"
+            x:Name="btnOpen"
             Height="504"
             Width="500"
             Background="#FF8298B1"

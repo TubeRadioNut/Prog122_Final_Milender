@@ -94,8 +94,12 @@ namespace Prog122_Final_Milender
 
         public void FillComboBox()
         {
+            //Create a new instace of DateTime variable
+            DateTime currentDate = DateTime.Now;
+            //Create int and assign it the current year plus 1
+            int currentYear = currentDate.Year + 1;
 
-            for (int i = 1000; i < 2025; i++)
+            for (int i = 1000; i < currentYear; i++)
             {
                 cmbEditDate.Items.Add(i);
             }
@@ -158,7 +162,7 @@ namespace Prog122_Final_Milender
             
         }
 
-        private void btnEditName_Copy_Click(object sender, RoutedEventArgs e)
+        private void btnEditArtist_Click(object sender, RoutedEventArgs e)
         {
             Art selectedArt = lvArt.SelectedItem as Art;
             if (selectedArt != null)
